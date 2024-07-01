@@ -1,0 +1,489 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #080808;
+  color: #fff;
+  position: relative;
+}
+
+#header {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: calc(100% - 50px);
+  height: 95vh;
+  background-image: url("images/photo_2024-04-19_12-30-19.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right;
+  z-index: -1;
+}
+
+#header {
+  position: relative; /* Ensure position relative for absolute positioning within it */
+}
+
+.container {
+  padding: 20px;
+}
+
+.logo-section {
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.logo {
+  height: 100px;
+  width: 200px;
+}
+
+.header-text {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: 60px; /* Adjust as needed */
+}
+
+.links {
+  position: absolute;
+  top: 40px;
+  right: 90px;
+  z-index: 1; /* Ensure navigation links are above header content */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+nav ul li:first-child(1) {
+  margin-right: 50px;
+}
+
+nav ul li:nth-child(2),
+nav ul li:nth-child(3),
+nav ul li:nth-child(4),
+nav ul li:nth-child(5) {
+  margin-right: 50px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #ccc;
+}
+
+.header-text {
+  margin-top: 20%;
+  font-size: 28px;
+}
+
+.header-text p {
+  font-size: 18px;
+}
+
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.header-text h1 span {
+  color: rgb(189, 17, 17);
+}
+
+/* Additional CSS for positioning the "about" section below the "header-text" */
+#about {
+  text-align: center;
+  margin-bottom: 50px; /* Increase margin for spacing */
+}
+
+#about h1 {
+  font-size: 24px;
+}
+
+.about-col-1 {
+  text-align: left;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-col-1 img {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.about-col-2 {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .about-col-1 {
+      text-align: bottom;
+      margin-bottom: 0;
+  }
+}
+
+.photo52-image {
+  position: absolute;
+  top: calc(100% + 100px);
+  left: 140px;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 250px;
+  height: 400px;
+}
+
+.about-col-1 {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.about-col-2 {
+  position: absolute;
+  top: calc(100% + 200px);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: left;
+}
+
+.about-col-2 p {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.about-col-2 p:last-child {
+  font-size: 17px;
+}
+.about-col-2 h1 {
+  font-size: 40px !important; /* Adjust this value as needed */
+}
+
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: #b5476b;
+  font-size: 14px;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+#services {
+  position: relative;
+  top: 900px; /* Keep its current vertical position */
+  float: left; /* Move it to the left */
+  left: 0; /* Adjust this value to move the text to the left */
+}
+#services h1 {
+  font-size: 50px; /* Adjust this value as needed */
+}
+.services-list {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  margin-left: 300px; /* Adjust this value to create gap between lists */
+}
+.services-list div{
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.services-list div h2{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services-list div a{
+  text-decoration: none;
+  color:#fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.services-list div:hover{
+  background: #ff004f;
+  transform: translateY(-10px);
+}
+#my-work-header {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  margin-left: 0; /* Add margin-left for further adjustment */
+
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: normal;
+  text-decoration: none;
+  z-index: 9999;
+  top: calc(100% + 40px); /* Position the header below the services section with additional space */
+  left: 60px; /* Adjust the left position */
+ 
+}
+.work-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.work{
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work img{
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), #ff0022);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  transition: height 0.5s;
+}
+.layer{
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.layer h3{
+font-weight: 500;
+margin-bottom: 20px;
+}
+.layer a{
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover img{
+  transform: scale(1.1);
+
+}
+.work:hover .layer{
+height: 100%;
+}
+.btn{
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+.btn:hover{
+  background:#ff004f;
+}
+.contact-left{
+  flex-basis: 35%;
+
+
+}
+.contact-right{
+  flex-basis: 60%;
+}
+.contact-left p{
+
+margin-top: 30px;
+}
+.contact-left p i{
+color: #ff004f;
+margin-right: 15px;
+font-size: 25px ;
+}
+.social-icons{
+  margin-top: 30px;
+
+}
+.social-icons a{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+.social-icons a:hover{
+  color: #ff004f;
+  transform:translateY(-5px);
+}
+.btn.btn2{
+  display: inline-block;
+  background: #ff004f;
+
+}
+.contact-right form{
+  width: 100%;
+}
+form input, form textarea{
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+form .btn{
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.copyright{
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #080808;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.copyright i{
+  color: #ff004f;
+}
+/*............css for small screen*/
+
+nav {
+  position: relative;
+}
+
+.fa-bars {
+  position: absolute;
+  font-size: 30px;
+  top: 40px;
+  right: 20px; /* Adjust this value as needed */
+}
+nav ul {
+  background: #ff004f;
+  position: fixed;
+  top: 0;
+  right: -200px;
+  height: 100vh; /* Set to full height of viewport */
+  padding-top: 50px;
+  display: flex; /* Display list items horizontally */
+  flex-direction: column; /* Stack list items vertically */
+  justify-content: flex-start; /* Align list items to the start */
+  align-items: center; /* Center list items horizontally */
+  z-index: 2;
+  transition: right 0.5s;
+}
+
+nav ul li {
+  display: block;
+  margin: 25px;
+  list-style: none; /* Remove default list styles */
+}
+
+nav.open ul {
+  right: 0; /* Move the menu into view */
+}
+.links {
+  position: relative;
+}
+
+.links i.fa-x {
+  position: absolute;
+  top: 28px; /* Adjust top position as needed */
+ /* Adjust right position as needed */
+  cursor: pointer;
+  font-size: 20px; /* Adjust font size as needed */
+}
+#msg{
+  color: #61b752;
+  margin-top: -30px;
+  display: block;
+}
